@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "mappings": "AIEA,AAAA,KAAK,AAAC,CACJ,UAAU,CAAE,IAAI,CACjB,AAED,AAAA,KAAK,AAAC,CACJ,eAAe,CAAE,IAAI,CACrB,UAAU,CAAE,MAAM,CACnB,AAED,AAAA,gBAAgB,AAAC,CACf,QAAQ,CAAE,QAAQ,CAClB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,GAAG,CACV,MAAM,CAAE,GAAG,CACX,QAAQ,CAAE,MAAM,CAChB,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACV,IAAI,CAAE,aAAa,CACnB,SAAS,CAAE,UAAU,CACrB,MAAM,CAAE,IAAI,CACb,ACtBD,UAAU,CAAV,QAAU,CACR,GAAG,CACD,SAAS,CAAE,sBAAsB,CAAC,eAAe,CAAC,UAAU,CAC5D,gBAAgB,CAAE,WAAW,CAE/B,IAAI,CACF,SAAS,CAAE,iBAAiB,CAAC,eAAe,CAC5C,gBAAgB,CAAE,QAAQ,ECP9B,AAAA,CAAC,CACD,EAAE,CACF,EAAE,CACF,EAAE,CACF,EAAE,CACF,EAAE,CACF,EAAE,AAAC,CACD,MAAM,CAAE,CAAC,CACV,AAED,AAAA,EAAE,CACF,EAAE,AAAC,CACD,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACX,AAED,AAAA,MAAM,AAAC,CACL,MAAM,CAAE,OAAO,CAChB,AAED,AAAA,GAAG,AAAC,CACF,OAAO,CAAE,KAAK,CACd,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,IAAI,CACb",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/utils/_vars.scss",
+        "../sass/utils/_breakpoints.scss",
+        "../sass/utils/_mixins.scss",
+        "../sass/utils/_placeholders.scss",
+        "../sass/utils/_animations.scss",
+        "../sass/base/_reset.scss",
+        "../sass/base/_common.scss",
+        "../sass/components/_logo.scss",
+        "../sass/components/_menu-container.scss",
+        "../sass/components/_button.scss",
+        "../sass/components/_social-list.scss",
+        "../sass/components/_modal.scss",
+        "../sass/components/_modal-button-close.scss",
+        "../sass/components/_order-form.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}

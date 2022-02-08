@@ -1,0 +1,119 @@
+@mixin centeredFlex($type: flex, $just: center) {
+  display: $type;
+  align-items: center;
+  justify-content: $just;
+}
+
+@mixin textTitle($ff: $raleway, $fw: 700, $fs: 42px, $lh: 1.17, $ls: 0.05em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+// Hero:
+// font-size: 48px;
+// line-height: 56px;
+
+// About:
+// font-size: 28px;
+// line-height: 33px; - about
+
+// Reasons
+// line-height: 57px;
+// text-align: center;
+
+// Online, contacts
+// text-align: center;
+
+@mixin textPretitle($ff: $open-sans, $fw: 600, $fs: 11px, $lh: 1.37, $ls: 0.1em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: uppercase;
+}
+
+// Gallery
+// line-height: 1.9;
+
+@mixin textAftertitle($ff: $open-sans, $fw: 400, $fs: 16px, $lh: 1.62, $ls: 0.02em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+// Reasons
+// font-size: 18px;
+// line-height: 1.67;
+
+// Contacts
+// font-size: 18px;
+// line-height: 1.67;
+// text-decoration-line: underline;
+
+@mixin textBody($ff: $open-sans, $fw: 400, $fs: 14px, $lh: 1.86, $ls: 0.02em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+// Masters - position
+// line-height: 1.36;
+// text-align: center;
+
+// Contacts
+// font-size: 18px;
+// line-height: 1.67;
+
+// Masters - names
+// font-size: 18px;
+// line-height: 1.39;
+// text-align: center;
+
+// Mob-menu
+// font-size: 18px;
+// line-height: 1.39;
+// letter-spacing: 0.1em;
+// font-weight: 600;
+
+@mixin textButton($ff: $open-sans, $fw: 600, $fs: 12px, $lh: 1.33, $ls: 0.09em) {
+  font-family: $ff;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+  text-transform: uppercase;
+}
+
+@mixin minMedia($startBreakpoint) {
+  @media screen and (min-width: $startBreakpoint) {
+    @content;
+  }
+}
+
+@mixin maxMedia($finishBreakpoint) {
+  @media screen and (max-width: $finishBreakpoint) {
+    @content;
+  }
+}
+
+@mixin rangeMedia($startBreakpoint, $finishBreakpoint) {
+  @media screen and (min-width: $startBreakpoint) and (max-width: $finishBreakpoint) {
+    @content;
+  }
+}
+
+@mixin heroBg($media: desk, $dpr: 1x) {
+  background: $hero-bg-gradient, url('../images/hero/hero-#{$media}@#{$dpr}.jpg'), $hero-bg-color;
+  background: $hero-bg-gradient, url('../images/hero/hero-#{$media}@#{$dpr}.webp'), $hero-bg-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

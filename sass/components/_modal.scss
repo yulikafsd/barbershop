@@ -1,0 +1,79 @@
+// // Модалка
+
+// .backdrop {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   overflow-y: scroll;
+
+//   @include maxMedia($preTab) {
+//     padding: 0 15px;
+//     min-width: 100%;
+//     min-height: 100%;
+//   }
+
+//   background-color: $backdrop-bg-color;
+//   opacity: 1;
+//   visibility: visible;
+
+//   transition: opacity $main-effect, visibility $main-effect;
+// }
+
+// .is-hidden {
+//   visibility: hidden;
+//   opacity: 0;
+//   pointer-events: none;
+// }
+
+// .modal {
+//   width: 100%;
+//   padding: 40px;
+//   position: relative;
+//   margin: 0 auto;
+
+//   @include maxMedia($preMob) {
+//     max-width: 450px;
+//   }
+
+//   @include maxMedia($preDesk) {
+//     top: 30px;
+//   }
+
+//   @include minMedia($mob) {
+//     width: 450px;
+//   }
+
+//   @include minMedia($desk) {
+//     width: 528px;
+//   }
+
+//   opacity: 1;
+//   visibility: visible;
+
+//   // Или можно так, но это не гибко:
+//   // margin-left: calc(-1 * (528px / 2));
+//   // margin-top: calc(-1 * (581px / 2));
+//   transition: transform $main-effect, opacity $main-effect, visibility $main-effect;
+
+//   background-color: $primary-color;
+//   box-shadow: $modal-shadow;
+//   border-radius: 4px;
+
+//   .backdrop.is-hidden & {
+//     opacity: 0;
+//     visibility: hidden;
+//     pointer-events: none;
+//     transform: scale(0.5);
+//   }
+// }
+
+// // Третий вариант позиционирования
+// // работает с relative-absolute связками с 1 ребенком
+// // .backdrop {
+// //   position: fixed; - не статик, у ребенка абсолют
+// //   @include centeredFlex();
+// // }

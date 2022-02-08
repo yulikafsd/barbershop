@@ -1,0 +1,53 @@
+// body {
+//   background-color: $primary-color;
+//   color: $primary-text-color;
+//   @include textFont;
+
+//   &.modal-open {
+//     overflow: hidden;
+//   }
+// }
+
+// .container {
+//   padding-left: 15px;
+//   padding-right: 15px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   @include maxMedia($preMob) {
+//     min-width: 320px;
+//     max-width: 480px;
+//   }
+//   @include minMedia($mob) {
+//     width: 480px;
+//   }
+
+//   @include minMedia($tab) {
+//     width: 768px;
+//   }
+
+//   @include minMedia($desk) {
+//     width: 1200px;
+//   }
+// }
+
+// .section {
+//   padding: 60px 0;
+
+//   @include minMedia($desk) {
+//     padding: 94px 0;
+//   }
+// }
+
+// .section__title {
+//   margin-bottom: 30px;
+//   @include textFont($ff: null, $fw: 700, $fs: 28px, $lh: 1.18, $ls: 0.03em);
+//   text-align: center;
+//   color: $title-text-color;
+
+//   @include minMedia($desk) {
+//     font-size: 36px;
+//     line-height: 1.17;
+//     margin-bottom: 50px;
+//   }
+// }
