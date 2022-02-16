@@ -7,14 +7,11 @@
     <title lang="en">BarberShop</title>
     <!-- Favicon -->
     <link type="image/x-icon" rel="shortcut icon" href="./images/favicon/favicon.ico">
-<link type="image/png" rel="icon" href="./images/favicon/favicon.png">
+    <link type="image/png" rel="icon" href="./images/favicon/favicon.png">
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap" rel="stylesheet">
     <!-- modern-normalize -->
     <link
       rel="stylesheet"
@@ -30,376 +27,282 @@
   </head>
 
   <body>
+
     <!-- Хедер -->
-    <header class="header">
-      <div class="header__container container">
-        <nav class="nav">
-          <a href="./index.html" lang="en" class="logo nav__logo link"
-            ><span class="logo__accent">Web</span>Studio</a
-          >
-            <button
-              type="button"
-              class="menu-toggle-open js-open-menu"
-              aria-expanded="false"
-              aria-controls="mobile-menu"
-              aria-label="Открытие мобильного меню"
-            >
-              <svg width="40" height="40">
-                <use href="./images/icons.svg#menu" class="menu-toggle__icon-menu"></use>
-              </svg>
-            </button>
-        </nav>
+<header class="page-header">
+    <nav class="nav container">
+    <a class="nav__link link" href="./index.html">
+      <svg class="nav__logo" width="69" height="56">
+        <use class="nav__logo-icon" href="./images/icons.svg#logo" alt="Лого"></use>
+        <use class="nav__logo-mob-icon" href="./images/icons.svg#logo-mob" alt="Лого"></use>
+      </svg>
+    </a>
+
+    <!-- Меню десктоп -->
+    <div class="nav-menu">
         <ul class="nav-list list">
           <li class="nav-list__item">
-            <a href="./index.html" class="nav-list__link link nav-list__link--current">Студия</a>
+            <a href="./index.html" class="nav-list__link link nav-list__link--current">О нас</a>
           </li>
           <li class="nav-list__item">
-            <a href="./portfolio.html" class="nav-list__link link">Портфолио</a>
+            <a href="#" class="nav-list__link link">Услуги и цены</a>
           </li>
-          <li class="nav-list__item"><a href="" class="nav-list__link link">Контакты</a></li>
-        </ul>
-        <ul class="contact-list list">
-          <li class="contact-list__item">
-            <a href="mailto:info@devstudio.com" class="contact-list__link link">
-              <svg class="contact-list__icon contact-list__icon--env" width="16" height="12">
-                <use class="icon" href="./images/icons.svg#envelope"></use>
-                <use class="icon-tab" href="./images/icons.svg#envelope-tab"></use>
-              </svg>
-              info@devstudio.com
-            </a>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link link">Мастера</a>
           </li>
-          <li class="contact-list__item">
-            <a href="tel:+380961111111" class="contact-list__link link">
-              <svg class="contact-list__icon contact-list__icon--smart" width="10" height="16">
-                <use class="icon" href="./images/icons.svg#smartphone"></use>
-                <use class="icon-tab" href="./images/icons.svg#smartphone-tab"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
+          <li class="nav-list__item">
+            <a href="#" class="nav-list__link link">Контакты</a>
           </li>
         </ul>
+        <div class="nav-contacts">
+          <a href="tel:+380441111111" class="nav-contacts__link link">+38 044 111 11 11</a>
+          <button class="button nav-contacts__button" type="button" data-modal-open>Онлайн-запись</button>
+        </div>
       </div>
-    </header>
+
+    <!-- Моб бургер -->
+    <button class="nav__burger menu-toggle-open js-open-menu" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открытие мобильного меню">
+      <svg class="menu-toggle__burger" width="40" height="40">
+        <use class="menu-toggle__burger-icon" href="images/icons.svg#burger" alt="Меню"></use>
+      </svg>
+    </button>
+
+    </div>
+  </nav>
+</header>
 
     <main>
       <!-- Мобильное меню -->
 
       <div class="mob-menu-container js-menu-container" id="mobile-menu">
-        <div class="container">
+        <div class="mob-container">
           <div class="mob-menu-top">
-          <button
+            <button
             type="button"
             class="menu-toggle-close js-close-menu"
             aria-label="Закрытие мобильного меню"
           >
             <svg width="40" height="40">
-              <use href="./images/icons.svg#close" class="menu-toggle__icon-close"></use>
+              <use href="./images/icons.svg#close" class="menu-toggle__icon-close" alt="Закрыть"></use>
             </svg>
           </button>
           <ul class="mob-menu list">
             <li class="mob-menu__item">
-              <a href="./index.html" class="mob-menu__link link mob-menu__link--current">Студия</a>
+              <a href="./index.html" class="mob-menu__link link mob-menu__link--current">О нас</a>
             </li>
             <li class="mob-menu__item">
-              <a href="./portfolio.html" class="mob-menu__link link">Портфолио</a>
+              <a href="#" class="mob-menu__link link">Услуги и цены</a>
             </li>
-            <li class="mob-menu__item"><a href="" class="mob-menu__link link">Контакты</a></li>
-          </ul>
-          </div>
-          <div class="mob-menu-bottom">
-          <ul class="mob-menu-contacts list">
-            <li class="mob-menu-contacts__item">
-              <a
-                href="tel:+380961111111"
-                class="mob-menu-contacts__link mob-menu-contacts__link--tel link"
-              >
-                +38 096 111 11 11
-              </a>
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link link">Мастера</a>
             </li>
-            <li class="mob-menu-contacts__item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="mob-menu-contacts__link mob-menu-contacts__link--email link"
-              >
-                info@devstudio.com
-              </a>
-            </li>
-          </ul>
-          <ul class="mob-menu-socials list">
-            <li class="mob-menu-socials__item">
-              <a
-                class="mob-menu-socials__link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Instagram</a
-              >
-            </li>
-            <li class="mob-menu-socials__item">
-              <a
-                class="mob-menu-socials__link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Twitter</a
-              >
-            </li>
-            <li class="mob-menu-socials__item">
-              <a
-                class="mob-menu-socials__link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Facebook</a
-              >
-            </li>
-            <li class="mob-menu-socials__item">
-              <a
-                class="mob-menu-socials__link link"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                >LinkedIn</a
-              >
+            <li class="mob-menu__item">
+              <a href="#" class="mob-menu__link link">Контакты</a>
             </li>
           </ul>
           </div>
+
+          <div class="mob-menu-center">
+          <a href="tel:+380441111111" class="mob-menu__link mob-menu__link--tel link"> +38 044 111 1 1 11 </a>
+          <button class="button mob-menu__button" type="button" data-modal-open>Онлайн-запись</button>
+          </div>
+
+          <div class="mob-menu-bottom">            
+            <ul class="mob-menu-socials list">
+              <li class="mob-menu-socials__item">
+                <a class="mob-menu-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+              <li class="mob-menu-socials__item">
+                <a class="mob-menu-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Youtube</a>
+              </ul>
+              </div>
         </div>
       </div>
+
 
       <!-- Герой -->
-      <div class="container-fluid">
-        <section class="section-hero">
-          <h1 class="section-hero__title animate__animated animate__fadeInDown">
-            Эффективные решения для вашего бизнеса
-          </h1>
-          <button type="button" class="button section-hero__button" data-modal-open>
-            Заказать услугу
-          </button>
-        </section>
-      </div>
 
-      <!-- Особенности -->
-      <section class="section">
-        <div class="container">
-          <h2 class="section__title visually-hidden" aria-label="Особенности">Особенности</h2>
-          <ul class="features-list list">
-            <li class="features-list__item">
-              <div class="features-list__icon">
-                <svg width="70" height="70">
-                  <use href="./images/icons.svg#antenna"></use>
-                </svg>
-              </div>
-              <h3 class="features-list__subtitle">Внимание к деталям</h3>
-              <p class="features-list__text">
-                Идейные соображения, а также начало повседневной работы по формированию позиции.
-              </p>
-            </li>
-            <li class="features-list__item">
-              <div class="features-list__icon">
-                <svg width="70" height="70">
-                  <use href="./images/icons.svg#clock"></use>
-                </svg>
-              </div>
-              <h3 class="features-list__subtitle">Пунктуальность</h3>
-              <p class="features-list__text">
-                Задача организации, в особенности же рамки и место обучения кадров влечет за собой.
-              </p>
-            </li>
-            <li class="features-list__item">
-              <div class="features-list__icon">
-                <svg width="70" height="70">
-                  <use href="./images/icons.svg#diagram"></use>
-                </svg>
-              </div>
-              <h3 class="features-list__subtitle">Планирование</h3>
-              <p class="features-list__text">
-                Равным образом консультация с широким активом в значительной степени обуславливает.
-              </p>
-            </li>
-            <li class="features-list__item">
-              <div class="features-list__icon">
-                <svg width="70" height="70">
-                  <use href="./images/icons.svg#astronaut"></use>
-                </svg>
-              </div>
-              <h3 class="features-list__subtitle">Современные технологии</h3>
-              <p class="features-list__text">
-                Значимость этих проблем настолько очевидна, что реализация плановых заданий.
-              </p>
-            </li>
-          </ul>
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero-socials">
+            <ul class="hero-socials__list list">
+              <li class="hero-socials__item pretitle">
+                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+              </li>
+              <li class="hero-socials__item">
+                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Youtube</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hero-content">
+            <p class="hero__pretitle pretitle animate__animated animate__fadeInLeft" lang="en">A hair salon for men in Kyiv</p>
+            <h1 class="hero__title animate__animated animate__fadeInLeft" lang="en">BarberShop</h1>
+            <p class="hero__aftertitle animate__animated animate__fadeInLeft">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+        </div>
         </div>
       </section>
 
-      <!-- Чем мы занимаемся -->
-      <section class="section section-services">
+      <!-- About -->
+
+      <section class="section about">
         <div class="container">
-          <h2 class="section__title">Чем мы занимаемся</h2>
-          <ul class="services-list list">
-            <li class="services-list__item">
-              <a href="" class="services-list__link link">
-                <picture>
-                    <source
-                      srcset="
-                        ./images/services/services-1@1x.webp 1x,
-                        ./images/services/services-1@2x.webp 2x,
-                        ./images/services/services-1@3x.webp 3x
-                      "
-                      media="(min-width: 1200px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/services/services-1@1x.jpg 1x,
-                        ./images/services/services-1@2x.jpg 2x,
-                        ./images/services/services-1@3x.jpg 3x
-                      "
-                      media="(min-width: 1200px)"
-                    />
-                    <img
-                  src="./images/services/services-1.jpg"
-                  alt="человек программирует на компьютере десктопные приложения"
-                  width="370"
-                  height="294"
-                />
-                </picture>
-                <h3 class="services-list__subtitle">Десктопные приложения</h3>
-              </a>
-            </li>
-            <li class="services-list__item">
-              <a href="" class="services-list__link link">
-                <picture>
-                    <source
-                      srcset="
-                        ./images/services/services-2@1x.webp 1x,
-                        ./images/services/services-2@2x.webp 2x,
-                        ./images/services/services-2@3x.webp 3x
-                      "
-                      media="(min-width: 1200px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/services/services-2@1x.jpg 1x,
-                        ./images/services/services-2@2x.jpg 2x,
-                        ./images/services/services-2@3x.jpg 3x
-                      "
-                      media="(min-width: 1200px)"
-                    /><img
-                  src="./images/services/services-2.jpg"
-                  alt="человек с мобильным телефоном в руках разрабатывает мобильное приложение на ноутбуке"
-                  width="370"
-                  height="294"
-                />
-                </picture>
-                <h3 class="services-list__subtitle">Мобильные приложения</h3>
-              </a>
-            </li>
-            <li class="services-list__item">
-              <a href="" class="services-list__link link">
-                <picture>
-                    <source
-                      srcset="
-                        ./images/services/services-3@1x.webp 1x,
-                        ./images/services/services-3@2x.webp 2x,
-                        ./images/services/services-3@3x.webp 3x
-                      "
-                      media="(min-width: 1200px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/services/services-3@1x.jpg 1x,
-                        ./images/services/services-3@2x.jpg 2x,
-                        ./images/services/services-3@3x.jpg 3x
-                      "
-                      media="(min-width: 1200px)"
-                    /><img
-                  src="./images/services/services-3.jpg"
-                  alt="человек держит планшет с палитрой цветов для веб-дизайна"
-                  width="370"
-                  height="294"
-                />
-                </picture>
-                <h3 class="services-list__subtitle">Дизайнерские решения</h3>
-              </a>
-            </li>
-          </ul>
+          <p class="section__pretitle pretitle">о нас</p>
+          <h2 class="section__title">Лучший Барбершоп твоего города</h2>
+          <p class="section__aftertitle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
+          <p class="section__text">Мы команда, которая никогда не останавливается на достигнутом и жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда готовы усовершенствовать каждого, кто к нам приходит!</p>
+          <button class="button" type="button" data-modal-open>Онлайн-запись</button>
         </div>
       </section>
 
-      <!-- Наша команда -->
-      <section class="section section-team">
+      <!-- Prices -->
+
+      <section class="section prices">
         <div class="container">
-          <h2 class="section__title">Наша команда</h2>
+          <p class="section__pretitle section__pretitle--light pretitle">Проведи время в компании лучших мастеров</p>
+          <h2 class="section__title section__title--light">Услуги и цены</h2>
+          <ul class="price-list list">
+            <li class="price-list__item">
+              <p class="price-list__service">Мужская стрижка</p>
+              <p class="price-list__price">от 300 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Стрижка бороды</p>
+              <p class="price-list__price">от 200 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Стрижка усов</p>
+              <p class="price-list__price">от 200 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Бритье опасной бритвой</p>
+              <p class="price-list__price">от 200 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Cтрижка у стажера</p>
+              <p class="price-list__price">от 50 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Стрижка под насадку</p>
+              <p class="price-list__price">от 200 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Детская стрижка (до 12 лет)</p>
+              <p class="price-list__price">от 300 грн.</p>
+            </li>
+            <li class="price-list__item">
+              <p class="price-list__service">Камуфлирование седины</p>
+              <p class="price-list__price">от 200 грн.</p>
+            </li>
+          </ul>
+          <button class="button button--light section__button" type="button" data-modal-open>Онлайн-запись</button>
+        </div>
+      </section>
+
+      <!-- Reasons -->
+
+      <section class="section reasons">
+        <div class="container">
+          <p class="section__pretitle pretitle">старая традиционная школа</p>
+          <h2 class="section__title">Почему приходят именно к нам?</h2>
+          <p class="section__aftertitle">О нас говорят только хорошее. Но лучше<br/>1 раз увидеть и прочувствовать, чем 10 раз прочитать. </p>
+          <div class="reasons-container">
+            <ul class="reasons-left list">
+              <li class="reasons-list__item">
+                <span class="reasons-list__number">600</span>
+                <p class="reasons-list__text">Довольных клиентов в день</p>
+              </li>
+              <li class="reasons-list__item">
+                <span class="reasons-list__number">20</span>
+                <p class="reasons-list__text">Лучших мастеров Киева </p>
+              </li>
+            </ul>
+            <ul class="reasons-right list">
+              <li class="reasons-list__item">
+                <span class="reasons-list__number">50</span>
+                <p class="reasons-list__text">Наград за отличный сервис </p>
+              </li>
+              <li class="reasons-list__item">
+                <span class="reasons-list__number">100</span>
+                <p class="reasons-list__text">Подарков постоянным клиентам</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Masters -->
+      <section class="section team">
+        <div class="container">
+          <p class="section__pretitle pretitle">для настоящих ценителей атмосферы</p>
+          <h2 class="section__title">Наши мастера</h2>
 
           <ul class="team-list list">
+
             <li class="team-list__item">
               <div class="team-thumb">
                 <picture>
                     <source
                       srcset="
-                        ./images/team/team-1-desk@1x.webp 1x,
-                        ./images/team/team-1-desk@2x.webp 2x,
-                        ./images/team/team-1-desk@3x.webp 3x
+                        ./images/team/masters-1-desk@1x.webp 1x,
+                        ./images/team/masters-1-desk@2x.webp 2x,
+                        ./images/team/masters-1-desk@3x.webp 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-1-desk@1x.jpg 1x,
-                        ./images/team/team-1-desk@2x.jpg 2x,
-                        ./images/team/team-1-desk@3x.jpg 3x
+                        ./images/team/masters-1-desk@1x.jpg 1x,
+                        ./images/team/masters-1-desk@2x.jpg 2x,
+                        ./images/team/masters-1-desk@3x.jpg 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-1-tab@1x.webp 1x,
-                        ./images/team/team-1-tab@2x.webp 2x,
-                        ./images/team/team-1-tab@3x.webp 3x
+                        ./images/team/masters-1-tab@1x.webp 1x,
+                        ./images/team/masters-1-tab@2x.webp 2x,
+                        ./images/team/masters-1-tab@3x.webp 3x
                       "
                       media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-1-tab@1x.jpg 1x,
-                        ./images/team/team-1-tab@2x.jpg 2x,
-                        ./images/team/team-1-tab@3x.jpg 3x
+                        ./images/team/masters-1-tab@1x.jpg 1x,
+                        ./images/team/masters-1-tab@2x.jpg 2x,
+                        ./images/team/masters-1-tab@3x.jpg 3x
                       "
                       media="(min-width: 768px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-1-mob@1x.webp 1x,
-                        ./images/team/team-1-mob@2x.webp 2x,
-                        ./images/team/team-1-mob@3x.webp 3x
+                        ./images/team/masters-1-mob@1x.webp 1x,
+                        ./images/team/masters-1-mob@2x.webp 2x,
+                        ./images/team/masters-1-mob@3x.webp 3x
                       "
                       media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-1-mob@1x.jpg 1x,
-                        ./images/team/team-1-mob@2x.jpg 2x,
-                        ./images/team/team-1-mob@3x.jpg 3x
+                        ./images/team/masters-1-mob@1x.jpg 1x,
+                        ./images/team/masters-1-mob@2x.jpg 2x,
+                        ./images/team/masters-1-mob@3x.jpg 3x
                       "
                       media="(max-width: 767px)"
                     /><img
-                  src="./images/team/team-1.jpg"
-                  alt="фото Игоря Демьяненко"
-                  width="270"
-                  height="260"
+                  src="./images/team/masters-1.jpg"
+                  alt="фото John Smith"
+                  width="418"
+                  height="346"
                   class="team-list__img"
                 />
                 </picture>
               </div>
               <div class="team-list__card">
-                <h3 class="team-list__subtitle">Игорь Демьяненко</h3>
-                <p class="team-list__text" lang="en">Product Designer</p>
+                <h3 class="team-list__name" lang="en">John Smith</h3>
+                <p class="team-list__position" lang="en">Extreme Barber</p>
                 <ul class="social-list list">
                   <li class="social-list__item">
                     <a
@@ -458,65 +361,66 @@
                 <picture>
                     <source
                       srcset="
-                        ./images/team/team-2-desk@1x.webp 1x,
-                        ./images/team/team-2-desk@2x.webp 2x,
-                        ./images/team/team-2-desk@3x.webp 3x
+                        ./images/team/masters-2-desk@1x.webp 1x,
+                        ./images/team/masters-2-desk@2x.webp 2x,
+                        ./images/team/masters-2-desk@3x.webp 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-2-desk@1x.jpg 1x,
-                        ./images/team/team-2-desk@2x.jpg 2x,
-                        ./images/team/team-2-desk@3x.jpg 3x
+                        ./images/team/masters-2-desk@1x.jpg 1x,
+                        ./images/team/masters-2-desk@2x.jpg 2x,
+                        ./images/team/masters-2-desk@3x.jpg 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-2-tab@1x.webp 1x,
-                        ./images/team/team-2-tab@2x.webp 2x,
-                        ./images/team/team-2-tab@3x.webp 3x
+                        ./images/team/masters-2-tab@1x.webp 1x,
+                        ./images/team/masters-2-tab@2x.webp 2x,
+                        ./images/team/masters-2-tab@3x.webp 3x
                       "
                       media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-2-tab@1x.jpg 1x,
-                        ./images/team/team-2-tab@2x.jpg 2x,
-                        ./images/team/team-2-tab@3x.jpg 3x
+                        ./images/team/masters-2-tab@1x.jpg 1x,
+                        ./images/team/masters-2-tab@2x.jpg 2x,
+                        ./images/team/masters-2-tab@3x.jpg 3x
                       "
                       media="(min-width: 768px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-2-mob@1x.webp 1x,
-                        ./images/team/team-2-mob@2x.webp 2x,
-                        ./images/team/team-2-mob@3x.webp 3x
+                        ./images/team/masters-2-mob@1x.webp 1x,
+                        ./images/team/masters-2-mob@2x.webp 2x,
+                        ./images/team/masters-2-mob@3x.webp 3x
                       "
                       media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-2-mob@1x.jpg 1x,
-                        ./images/team/team-2-mob@2x.jpg 2x,
-                        ./images/team/team-2-mob@3x.jpg 3x
+                        ./images/team/masters-2-mob@1x.jpg 1x,
+                        ./images/team/masters-2-mob@2x.jpg 2x,
+                        ./images/team/masters-2-mob@3x.jpg 3x
                       "
                       media="(max-width: 767px)"
                     /><img
-                  src="./images/team/team-2.jpg"
-                  alt="фото Ольги Репиной"
-                  width="270"
-                  height="260"
+                  src="./images/team/masters-2.jpg"
+                  alt="фото Michele Doe"
+                  width="418"
+                  height="346"
                   class="team-list__img"
                 />
+                </picture>
               </div>
               <div class="team-list__card">
-                <h3 class="team-list__subtitle">Ольга Репина</h3>
-                <p class="team-list__text" lang="en">Frontend Developer</p>
+                <h3 class="team-list__name" lang="en">Michele Doe</h3>
+                <p class="team-list__position" lang="en">Extreme Barber</p>
                 <ul class="social-list list">
                   <li class="social-list__item social-list__item--no-margin-left">
                     <a
@@ -575,186 +479,68 @@
                 <picture>
                     <source
                       srcset="
-                        ./images/team/team-3-desk@1x.webp 1x,
-                        ./images/team/team-3-desk@2x.webp 2x,
-                        ./images/team/team-3-desk@3x.webp 3x
+                        ./images/team/masters-3-desk@1x.webp 1x,
+                        ./images/team/masters-3-desk@2x.webp 2x,
+                        ./images/team/masters-3-desk@3x.webp 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-3-desk@1x.jpg 1x,
-                        ./images/team/team-3-desk@2x.jpg 2x,
-                        ./images/team/team-3-desk@3x.jpg 3x
+                        ./images/team/masters-3-desk@1x.jpg 1x,
+                        ./images/team/masters-3-desk@2x.jpg 2x,
+                        ./images/team/masters-3-desk@3x.jpg 3x
                       "
-                      media="(min-width: 1200px)"
+                      media="(min-width: 1280px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-3-tab@1x.webp 1x,
-                        ./images/team/team-3-tab@2x.webp 2x,
-                        ./images/team/team-3-tab@3x.webp 3x
+                        ./images/team/masters-3-tab@1x.webp 1x,
+                        ./images/team/masters-3-tab@2x.webp 2x,
+                        ./images/team/masters-3-tab@3x.webp 3x
                       "
                       media="(min-width: 768px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-3-tab@1x.jpg 1x,
-                        ./images/team/team-3-tab@2x.jpg 2x,
-                        ./images/team/team-3-tab@3x.jpg 3x
+                        ./images/team/masters-3-tab@1x.jpg 1x,
+                        ./images/team/masters-3-tab@2x.jpg 2x,
+                        ./images/team/masters-3-tab@3x.jpg 3x
                       "
                       media="(min-width: 768px)"
                     />
                     <source
                       srcset="
-                        ./images/team/team-3-mob@1x.webp 1x,
-                        ./images/team/team-3-mob@2x.webp 2x,
-                        ./images/team/team-3-mob@3x.webp 3x
+                        ./images/team/masters-3-mob@1x.webp 1x,
+                        ./images/team/masters-3-mob@2x.webp 2x,
+                        ./images/team/masters-3-mob@3x.webp 3x
                       "
                       media="(max-width: 767px)"
                       type="image/webp"
                     />
                     <source
                       srcset="
-                        ./images/team/team-3-mob@1x.jpg 1x,
-                        ./images/team/team-3-mob@2x.jpg 2x,
-                        ./images/team/team-3-mob@3x.jpg 3x
+                        ./images/team/masters-3-mob@1x.jpg 1x,
+                        ./images/team/masters-3-mob@2x.jpg 2x,
+                        ./images/team/masters-3-mob@3x.jpg 3x
                       "
                       media="(max-width: 767px)"
                     /><img
-                  src="./images/team/team-3.jpg"
-                  alt="фото Николая Тарасова"
-                  width="270"
-                  height="260"
+                  src="./images/team/masters-3.jpg"
+                  alt="фото Alan Black"
+                  width="418"
+                  height="346"
                   class="team-list__img"
                 />
                 </picture>
               </div>
               <div class="team-list__card">
-                <h3 class="team-list__subtitle">Николай Тарасов</h3>
-                <p class="team-list__text" lang="en">Marketing</p>
+                <h3 class="team-list__name" lang="en">Alan Black</h3>
+                <p class="team-list__position" lang="en">Extreme Barber</p>
                 <ul class="social-list list">
                   <li class="social-list__item social-list__item--no-margin-left">
-                    <a
-                      href=""
-                      class="social-list__link link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="images/icons.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-list__item">
-                    <a
-                      href=""
-                      class="social-list__link link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="images/icons.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-list__item">
-                    <a
-                      href=""
-                      class="social-list__link link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="images/icons.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="social-list__item">
-                    <a
-                      href=""
-                      class="social-list__link link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <svg class="social-list__icon" width="20" height="20">
-                        <use href="images/icons.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="team-list__item">
-              <div class="team-thumb">
-                <picture>
-                    <source
-                      srcset="
-                        ./images/team/team-4-desk@1x.webp 1x,
-                        ./images/team/team-4-desk@2x.webp 2x,
-                        ./images/team/team-4-desk@3x.webp 3x
-                      "
-                      media="(min-width: 1200px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/team/team-4-desk@1x.jpg 1x,
-                        ./images/team/team-4-desk@2x.jpg 2x,
-                        ./images/team/team-4-desk@3x.jpg 3x
-                      "
-                      media="(min-width: 1200px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/team/team-4-tab@1x.webp 1x,
-                        ./images/team/team-4-tab@2x.webp 2x,
-                        ./images/team/team-4-tab@3x.webp 3x
-                      "
-                      media="(min-width: 768px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/team/team-4-tab@1x.jpg 1x,
-                        ./images/team/team-4-tab@2x.jpg 2x,
-                        ./images/team/team-4-tab@3x.jpg 3x
-                      "
-                      media="(min-width: 768px)"
-                    />
-                    <source
-                      srcset="
-                        ./images/team/team-4-mob@1x.webp 1x,
-                        ./images/team/team-4-mob@2x.webp 2x,
-                        ./images/team/team-4-mob@3x.webp 3x
-                      "
-                      media="(max-width: 767px)"
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        ./images/team/team-4-mob@1x.jpg 1x,
-                        ./images/team/team-4-mob@2x.jpg 2x,
-                        ./images/team/team-4-mob@3x.jpg 3x
-                      "
-                      media="(max-width: 767px)"
-                    /><img
-                  src="./images/team/team-4.jpg"
-                  alt="фото Михаила Ермакова"
-                  width="270"
-                  height="260"
-                  class="team-list__img"
-                />
-                </picture>
-              </div>
-              <div class="team-list__card">
-                <h3 class="team-list__subtitle">Михаил Ермаков</h3>
-                <p class="team-list__text" lang="en">UI Designer</p>
-                <ul class="social-list list">
-                  <li class="social-list__item">
                     <a
                       href=""
                       class="social-list__link link"
@@ -809,59 +595,262 @@
         </div>
       </section>
 
-      <!-- Постоянные клиенты -->
-      <section class="section section-clients">
+      <!-- Gallery -->
+
+      <section class="section gallery">
         <div class="container">
-          <h2 class="section__title">Постоянные клиенты</h2>
-          <ul class="clients-list list">
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer"
-                ><svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client1"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer"
-                ><svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client2"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer">
-                <svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client3"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer">
-                <svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client4"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer">
-                <svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client5"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="clients-list__item">
-              <a href="" class="clients-list__link link" target="bank" rel="noopener noreferrer">
-                <svg class="clients-list__icon" width="106" height="60">
-                  <use href="images/icons.svg#client6"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+          <p class="section__pretitle pretitle">На латинском языке “барба” означает “борода”</p>
+          <h2 class="section__title visually-hidden" aria-label="Галерея">Галерея</h2>
+          <div class="picture-thumb">
+                <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-desk@1x.webp 1x,
+                        ./images/gallery/gallery-1-desk@2x.webp 2x,
+                        ./images/gallery/gallery-1-desk@3x.webp 3x
+                      "
+                      media="(min-width: 1280px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-desk@1x.jpg 1x,
+                        ./images/gallery/gallery-1-desk@2x.jpg 2x,
+                        ./images/gallery/gallery-1-desk@3x.jpg 3x
+                      "
+                      media="(min-width: 1280px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-tab@1x.webp 1x,
+                        ./images/gallery/gallery-1-tab@2x.webp 2x,
+                        ./images/gallery/gallery-1-tab@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-tab@1x.jpg 1x,
+                        ./images/gallery/gallery-1-tab@2x.jpg 2x,
+                        ./images/gallery/gallery-1-tab@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-mob@1x.webp 1x,
+                        ./images/gallery/gallery-1-mob@2x.webp 2x,
+                        ./images/gallery/gallery-1-mob@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-1-mob@1x.jpg 1x,
+                        ./images/gallery/gallery-1-mob@2x.jpg 2x,
+                        ./images/gallery/gallery-1-mob@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    /><img
+                  src="./images/gallery/gallery-1.jpg"
+                  alt="барбер делает стрижку клиенту"
+                  width="418"
+                  height="360"
+                  class="team-list__img"
+                />
+                </picture>
+              </div>
+              <div class="picture-thumb">
+                <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-desk@1x.webp 1x,
+                        ./images/gallery/gallery-2-desk@2x.webp 2x,
+                        ./images/gallery/gallery-2-desk@3x.webp 3x
+                      "
+                      media="(min-width: 1280px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-desk@1x.jpg 1x,
+                        ./images/gallery/gallery-2-desk@2x.jpg 2x,
+                        ./images/gallery/gallery-2-desk@3x.jpg 3x
+                      "
+                      media="(min-width: 1280px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-tab@1x.webp 1x,
+                        ./images/gallery/gallery-2-tab@2x.webp 2x,
+                        ./images/gallery/gallery-2-tab@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-tab@1x.jpg 1x,
+                        ./images/gallery/gallery-2-tab@2x.jpg 2x,
+                        ./images/gallery/gallery-2-tab@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-mob@1x.webp 1x,
+                        ./images/gallery/gallery-2-mob@2x.webp 2x,
+                        ./images/gallery/gallery-2-mob@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-2-mob@1x.jpg 1x,
+                        ./images/gallery/gallery-2-mob@2x.jpg 2x,
+                        ./images/gallery/gallery-2-mob@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    /><img
+                  src="./images/gallery/gallery-2.jpg"
+                  alt="барбер наносит клиенту пену для бритья"
+                  width="418"
+                  height="360"
+                  class="team-list__img"
+                />
+                </picture>
+              </div>
+              <div class="picture-thumb">
+                <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-desk@1x.webp 1x,
+                        ./images/gallery/gallery-3-desk@2x.webp 2x,
+                        ./images/gallery/gallery-3-desk@3x.webp 3x
+                      "
+                      media="(min-width: 1280px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-desk@1x.jpg 1x,
+                        ./images/gallery/gallery-3-desk@2x.jpg 2x,
+                        ./images/gallery/gallery-3-desk@3x.jpg 3x
+                      "
+                      media="(min-width: 1280px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-tab@1x.webp 1x,
+                        ./images/gallery/gallery-3-tab@2x.webp 2x,
+                        ./images/gallery/gallery-3-tab@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-tab@1x.jpg 1x,
+                        ./images/gallery/gallery-3-tab@2x.jpg 2x,
+                        ./images/gallery/gallery-3-tab@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-mob@1x.webp 1x,
+                        ./images/gallery/gallery-3-mob@2x.webp 2x,
+                        ./images/gallery/gallery-3-mob@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-3-mob@1x.jpg 1x,
+                        ./images/gallery/gallery-3-mob@2x.jpg 2x,
+                        ./images/gallery/gallery-3-mob@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    /><img
+                  src="./images/gallery/gallery-3.jpg"
+                  alt="барбер вытирает лицо клиента после бритья"
+                  width="418"
+                  height="360"
+                  class="team-list__img"
+                />
+                </picture>
+              </div>
+              <div class="picture-thumb">
+                <picture>
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-desk@1x.webp 1x,
+                        ./images/gallery/gallery-4-desk@2x.webp 2x,
+                        ./images/gallery/gallery-4-desk@3x.webp 3x
+                      "
+                      media="(min-width: 1280px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-desk@1x.jpg 1x,
+                        ./images/gallery/gallery-4-desk@2x.jpg 2x,
+                        ./images/gallery/gallery-4-desk@3x.jpg 3x
+                      "
+                      media="(min-width: 1280px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-tab@1x.webp 1x,
+                        ./images/gallery/gallery-4-tab@2x.webp 2x,
+                        ./images/gallery/gallery-4-tab@3x.webp 3x
+                      "
+                      media="(min-width: 768px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-tab@1x.jpg 1x,
+                        ./images/gallery/gallery-4-tab@2x.jpg 2x,
+                        ./images/gallery/gallery-4-tab@3x.jpg 3x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-mob@1x.webp 1x,
+                        ./images/gallery/gallery-4-mob@2x.webp 2x,
+                        ./images/gallery/gallery-4-mob@3x.webp 3x
+                      "
+                      media="(max-width: 767px)"
+                      type="image/webp"
+                    />
+                    <source
+                      srcset="
+                        ./images/gallery/gallery-4-mob@1x.jpg 1x,
+                        ./images/gallery/gallery-4-mob@2x.jpg 2x,
+                        ./images/gallery/gallery-4-mob@3x.jpg 3x
+                      "
+                      media="(max-width: 767px)"
+                    /><img
+                  src="./images/gallery/gallery-4.jpg"
+                  alt="барбер делает фигурную стрижку затылка клиента"
+                  width="418"
+                  height="360"
+                  class="team-list__img"
+                />
+                </picture>
+              </div>
         </div>
       </section>
+
     </main>
 
-    <!-- Футер -->
+    <!-- Футер
     <footer class="footer">
       <div class="container footer__container">
         <div class="footer-address">
@@ -973,9 +962,9 @@
           </form>
         </div>
       </div>
-    </footer>
+    </footer> -->
 
-    <!-- Модалка -->
+    <!-- Модалка
 
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -1046,7 +1035,7 @@
           </svg>
         </button>
       </div>
-    </div>
+    </div> -->
 
     <!-- Скрипты мобменю -->
 

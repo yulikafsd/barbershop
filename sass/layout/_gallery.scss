@@ -1,0 +1,9 @@
+.gallery .section__pretitle {
+  margin-bottom: 44px;
+}
+
+.picture-thumb {
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}

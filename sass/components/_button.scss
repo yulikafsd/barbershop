@@ -1,26 +1,34 @@
-// // Кнопка
+// Кнопка
 
-// .button {
-//   display: block;
-//   width: 200px;
-//   height: 50px;
-//   padding: 10px 0;
-//   margin-right: auto;
-//   margin-left: auto;
+.button {
+  display: block;
+  width: 160px;
+  height: 40px;
+  padding: 12px 0;
+  margin-right: auto;
 
-//   color: $primary-color;
-//   background-color: $accent-color;
-//   border: transparent;
-//   border-radius: 4px;
-//   box-shadow: $button-shadow;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
 
-//   @include textFont($ff: inherit, $fw: 700, $fs: 16px, $lh: 1.87, $ls: 0.06em);
-//   text-align: center;
+  @include textButton;
+  text-align: center;
+  color: $primary-color;
 
-//   transition: background-color $main-effect;
+  &--light {
+    color: $secondary-color;
+  }
 
-//   &:hover,
-//   &:focus {
-//     background-color: $button-hover-color;
-//   }
-// }
+  transition: background-color $main-effect, color $main-effect;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $secondary-color;
+  }
+}
+
+.section__button {
+  margin-left: auto;
+  margin-right: auto;
+}

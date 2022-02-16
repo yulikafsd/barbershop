@@ -1,53 +1,100 @@
-// body {
-//   background-color: $primary-color;
-//   color: $primary-text-color;
-//   @include textFont;
+body {
+  background-color: $secondary-color;
+  color: $primary-color;
+  @include textBody;
 
-//   &.modal-open {
-//     overflow: hidden;
-//   }
-// }
+  &.modal-open {
+    overflow: hidden;
+  }
+}
 
-// .container {
-//   padding-left: 15px;
-//   padding-right: 15px;
-//   margin-left: auto;
-//   margin-right: auto;
+.container {
+  padding-left: 31px;
+  padding-right: 31px;
+  margin: 0 auto;
 
-//   @include maxMedia($preMob) {
-//     min-width: 320px;
-//     max-width: 480px;
-//   }
-//   @include minMedia($mob) {
-//     width: 480px;
-//   }
+  @include maxMedia($preTab) {
+    max-width: 480px;
+  }
 
-//   @include minMedia($tab) {
-//     width: 768px;
-//   }
+  @include minMedia($tab) {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
 
-//   @include minMedia($desk) {
-//     width: 1200px;
-//   }
-// }
+  @include minMedia($desk) {
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
 
-// .section {
-//   padding: 60px 0;
+.section {
+  padding: 84px 0;
 
-//   @include minMedia($desk) {
-//     padding: 94px 0;
-//   }
-// }
+  @include minMedia($tab) {
+    padding: 100px 0;
+  }
 
-// .section__title {
-//   margin-bottom: 30px;
-//   @include textFont($ff: null, $fw: 700, $fs: 28px, $lh: 1.18, $ls: 0.03em);
-//   text-align: center;
-//   color: $title-text-color;
+  @include minMedia($desk) {
+    padding: 130px 0;
+  }
+}
 
-//   @include minMedia($desk) {
-//     font-size: 36px;
-//     line-height: 1.17;
-//     margin-bottom: 50px;
-//   }
-// }
+.pretitle {
+  display: flex;
+  align-items: center;
+}
+
+.pretitle::before {
+  content: '';
+  height: 1px;
+  width: 60px;
+  margin-right: 20px;
+  background-color: currentColor;
+}
+
+.section__pretitle {
+  @include textPretitle;
+  color: $primary-color;
+  margin-bottom: 20px;
+
+  &--light {
+    color: $light-text-color-alfa;
+  }
+}
+
+.section__title {
+  @include textTitle;
+  color: $primary-color;
+  margin-bottom: 44px;
+
+  &--light {
+    color: $secondary-color;
+  }
+
+  //   margin-bottom: 30px;
+  //   @include textFont($ff: null, $fw: 700, $fs: 28px, $lh: 1.18, $ls: 0.03em);
+  //   text-align: center;
+  //   color: $title-text-color;
+
+  //   @include minMedia($desk) {
+  //     font-size: 36px;
+  //     line-height: 1.17;
+  //     margin-bottom: 50px;
+  //   }
+}
+
+.section__aftertitle {
+  @include textAftertitle;
+  margin-bottom: 20px;
+  color: $dark-text-color;
+  margin-bottom: 20px;
+}
+
+.section__text {
+  @include textBody;
+  color: $dark-text-color;
+  margin-bottom: 40px;
+}

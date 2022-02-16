@@ -6,18 +6,17 @@
 @import './base/reset';
 @import './base/common';
 @import './components/logo';
-@import './components/menu-container';
+@import './components/mob-menu-container';
 @import './components/button';
 @import './components/social-list';
-// @import './layout/header';
-// @import './layout/header-nav';
-// @import './layout/hero';
-// @import './layout/features';
-// @import './layout/services';
-// @import './layout/team';
-// @import './layout/clients';
-// @import './layout/filters';
-// @import './layout/portfolio';
+@import './layout/header';
+@import './layout/hero';
+@import './layout/about';
+@import './layout/prices';
+@import './layout/reasons';
+@import './layout/team';
+@import './layout/gallery';
+
 // @import './layout/footer';
 // @import './layout/footer-address';
 // @import './layout/footer-social';

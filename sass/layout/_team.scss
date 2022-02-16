@@ -1,0 +1,28 @@
+.section.team {
+  background-color: $light-bg-color;
+}
+
+.team-list__item {
+  &:not(:last-child) {
+    margin-bottom: 64px;
+  }
+}
+
+.team-thumb {
+  margin-bottom: 30px;
+}
+
+.team-list__card {
+  text-align: center;
+}
+
+.team-list__name {
+  @include textBody($fs: 18px, $lh: 1.39);
+  margin-bottom: 8px;
+}
+
+.team-list__position {
+  line-height: 1.36;
+  color: $accent-color;
+  margin-bottom: 30px;
+}

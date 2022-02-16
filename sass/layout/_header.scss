@@ -1,0 +1,135 @@
+.page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 40px;
+
+  @include minMedia($tab) {
+    padding-top: 32px;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include maxMedia($preTab) {
+    width: 100%;
+  }
+
+  @include minMedia($tab) {
+    padding-left: 49px;
+  }
+
+  @include minMedia($desk) {
+    padding-left: 0;
+    padding-right: 7px;
+  }
+}
+
+.nav__logo {
+  display: block;
+  width: 69px;
+  height: 56px;
+  fill: $secondary-color;
+
+  @include minMedia($tab) {
+    margin-right: 61px;
+    width: 65px;
+    fill: $primary-color;
+  }
+
+  @include minMedia($desk) {
+    margin-right: 70px;
+  }
+}
+
+.nav__logo-icon {
+  @include maxMedia($preTab) {
+    display: none;
+  }
+}
+
+.nav__logo-mob-icon {
+  @include minMedia($tab) {
+    display: none;
+  }
+}
+
+.nav-menu {
+  display: none;
+
+  @include minMedia($tab) {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
+  }
+
+  @include minMedia($desk) {
+    align-items: center;
+  }
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-list__item {
+  &:not(:last-child) {
+    margin-right: 24px;
+
+    @include minMedia($desk) {
+      margin-right: 40px;
+    }
+  }
+}
+
+.nav-list__link,
+.nav-contacts__link {
+  display: block;
+  @include textPretitle($fs: 12px, $lh: 1.33);
+  text-transform: none;
+  color: $secondary-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  &--current {
+    color: $accent-color;
+  }
+}
+
+.nav-contacts {
+  position: relative;
+  text-align: center;
+  margin-left: auto;
+
+  @include minMedia($desk) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav-contacts__link {
+  position: absolute;
+  width: 160px;
+  left: 0;
+  top: 60px;
+
+  @include minMedia($desk) {
+    position: static;
+    margin-right: 40px;
+  }
+}
+
+.nav-contacts__button {
+  color: $secondary-color;
+
+  @include minMedia($desk) {
+    margin-top: 8px;
+  }
+}

@@ -1,19 +1,6 @@
-// // Лого
+// Лого шапки
 
-// .logo {
-//   @include textFont($ff: $raleway, $fw: 700, $fs: 26px, $lh: 1.19, $ls: null);
-// }
-
-// .logo__accent {
-//   color: $accent-color;
-// }
-
-// // Лого шапки
-
-// .nav__logo {
-//   display: block;
-//   padding: 16px 0;
-//   // вместо правого маржина - вo флексе space-between;
+// вместо правого маржина - вo флексе space-between;
 
 //   @include minMedia($tab) {
 //     padding: 26px 0;
@@ -27,7 +14,6 @@
 //   }
 
 //   color: $title-text-color;
-// }
 
 // // Лого футера
 

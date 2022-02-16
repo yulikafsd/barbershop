@@ -1,0 +1,144 @@
+.hero__container {
+  display: flex;
+  padding: 0;
+}
+
+.hero-socials {
+  display: none;
+
+  @include minMedia($tab) {
+    width: 120px;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 85px 40px 74px;
+  }
+
+  @include minMedia($desk) {
+    width: 93px;
+    padding: 0 55px 40px 23px;
+  }
+}
+
+.hero-socials__list {
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg) translate(-15px);
+  transform-origin: top left;
+}
+
+.hero-socials__item {
+  &:first-child {
+    margin-right: 40px;
+  }
+
+  &.pretitle::before {
+    margin-right: 40px;
+  }
+}
+
+.hero-socials__link {
+  display: block;
+  @include textPretitle($ls: 0.2em);
+  text-transform: none;
+  color: inherit;
+  transition: color $main-effect;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.hero-content {
+  min-height: 580px;
+  background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+    url(../images/bgs/slider-3-mob@1x.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  padding: 208px 0 183px 31px;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bgs/slider-3-mob@2x.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bgs/slider-3-mob@3x.jpg);
+  }
+
+  @include minMedia($tab) {
+    flex-grow: 0;
+    width: 570px;
+    padding: 280px 157px 234px 64px;
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bgs/slider-3-tab@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+        url(../images/bgs/slider-3-tab@2x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+        url(../images/bgs/slider-3-tab@3x.jpg);
+    }
+  }
+
+  @include minMedia($desk) {
+    width: 1077px;
+    padding: 272px 456px 206px 96px;
+    background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+      url(../images/bgs/slider-3-desk@1x.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+        url(../images/bgs/slider-3-desk@2x.jpg);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: linear-gradient($hero-bg-color, $hero-bg-color),
+        url(../images/bgs/slider-3-desk@3x.jpg);
+    }
+  }
+}
+
+.hero__pretitle {
+  margin-bottom: 20px;
+
+  @include textPretitle;
+  color: $light-text-color-alfa;
+}
+
+.hero__title {
+  margin-bottom: 20px;
+
+  @include textTitle($fs: 48px);
+  color: $secondary-color;
+  animation-delay: 300ms;
+
+  @include minMedia($desk) {
+    font-size: 72px;
+    line-height: 1.18;
+  }
+}
+
+.hero__aftertitle {
+  max-width: 306px;
+
+  @include textAftertitle;
+  color: $light-text-color;
+  animation-delay: 600ms;
+
+  @include minMedia($tab) {
+    max-width: 350px;
+  }
+
+  @include minMedia($desk) {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.67;
+  }
+}
