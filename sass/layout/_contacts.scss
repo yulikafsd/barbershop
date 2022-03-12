@@ -14,8 +14,22 @@
   }
 }
 
+.contacts .section__title {
+  margin-bottom: 40px;
+}
+
+.contacts-wrapper {
+  @include minMedia($tab) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .address {
   margin-bottom: 44px;
+  @include minMedia($tab) {
+    width: 330px;
+  }
 }
 
 .address-list__item {
@@ -23,6 +37,12 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+  }
+
+  @include minMedia($tab) {
+    &:first-of-type {
+      width: 260px;
+    }
   }
 }
 
@@ -33,6 +53,16 @@
 .contacts .section__pretitle {
   color: $secondary-color;
   margin-bottom: 20px;
+
+  @include minMedia($tab) {
+    color: $light-text-color-alfa;
+  }
+}
+
+.schedule {
+  @include minMedia($tab) {
+    width: 330px;
+  }
 }
 
 .contacts__schedule,
@@ -47,4 +77,10 @@
 .address-list__link:hover,
 .address-list__link:focus {
   color: $secondary-color;
+}
+
+.contacts__schedule {
+  @include minMedia($tab) {
+    color: $light-text-color;
+  }
 }

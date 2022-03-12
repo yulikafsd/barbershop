@@ -2,9 +2,25 @@
   background-color: $light-bg-color;
 }
 
+.team .section__title,
+.team .section__pretitle {
+  @include minMedia($tab) {
+    margin-left: 119px;
+  }
+}
+
 .team-list__item {
   &:not(:last-child) {
     margin-bottom: 64px;
+  }
+}
+
+.team .team-list__img {
+  @include minMedia($tab) {
+    width: 450px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

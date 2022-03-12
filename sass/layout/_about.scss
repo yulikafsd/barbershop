@@ -1,3 +1,9 @@
+.about .container {
+  @include minMedia($tab) {
+    @include centeredFlex($align: top, $just: space-between);
+  }
+}
+
 .about .section__title {
   font-size: 28px;
   line-height: 1.18;
@@ -5,5 +11,25 @@
 
   @include maxMedia($preMob) {
     font-size: 24px;
+  }
+
+  @include minMedia($tab) {
+    width: 330px;
+  }
+}
+
+.thumb-about {
+  display: none;
+
+  @include minMedia($tab) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.wrapper-about {
+  @include minMedia($tab) {
+    width: 330px;
   }
 }

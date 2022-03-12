@@ -3,7 +3,26 @@
 }
 
 .picture-thumb {
-  &:not(:last-child) {
-    margin-bottom: 30px;
+  @include maxMedia($preTab) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
+
+  @include minMedia($tab) {
+    margin: 15px;
+  }
+}
+
+.gallery-thumb {
+  @include minMedia($tab) {
+    display: flex;
+    width: 720px;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.gallery .team-list__img {
+  width: 330px;
 }

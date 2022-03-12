@@ -6,6 +6,12 @@
   text-align: center;
 }
 
+.form-wrapper {
+  @include minMedia($tab) {
+    @include centeredFlex($just: space-between);
+  }
+}
+
 .online-form__input {
   display: block;
   width: 418px;
@@ -19,10 +25,18 @@
   color: $secondary-color;
   transition: border-color $main-effect;
 
+  @include minMedia($tab) {
+    width: 330px;
+  }
+
   &--textarea {
     margin-bottom: 44px;
     height: 60px;
     resize: none;
+
+    @include minMedia($tab) {
+      width: 690px;
+    }
   }
 
   @include maxMedia($preMob) {
@@ -55,4 +69,8 @@
   & .online-form__label-text {
     color: $secondary-color;
   }
+}
+
+.online .button {
+  margin-left: 0;
 }

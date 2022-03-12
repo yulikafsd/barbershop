@@ -6,11 +6,20 @@
   font-size: 18px;
   line-height: 1.67;
   margin-bottom: 44px;
+
+  @include minMedia($tab) {
+    width: 500px;
+  }
 }
 
 .reasons-container {
   display: flex;
   justify-content: space-between;
+
+  @include minMedia($tab) {
+    width: 450px;
+    margin-left: auto;
+  }
 }
 
 .reasons-right {
@@ -35,6 +44,10 @@
   @include maxMedia($preMob) {
     width: 40vw;
     min-width: 125px;
+  }
+
+  @include minMedia($tab) {
+    width: 210px;
   }
 }
 

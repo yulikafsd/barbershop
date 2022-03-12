@@ -15,6 +15,12 @@
   }
 }
 
+.prices .pretitle {
+  @include rangeMedia($tab, $preDesk) {
+    text-transform: none;
+  }
+}
+
 .price-list {
   padding: 30px;
   margin-bottom: 50px;
