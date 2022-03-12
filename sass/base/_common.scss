@@ -13,8 +13,12 @@ body {
   padding-right: 31px;
   margin: 0 auto;
 
-  @include maxMedia($preTab) {
-    max-width: 480px;
+  @include maxMedia($preMob) {
+    min-width: 330px;
+  }
+
+  @include minMedia($mob) {
+    width: 480px;
   }
 
   @include minMedia($tab) {
@@ -32,6 +36,8 @@ body {
 
 .section {
   padding: 84px 0;
+  margin: 0 auto;
+  min-width: 330px;
 
   @include minMedia($tab) {
     padding: 100px 0;
@@ -69,9 +75,15 @@ body {
   @include textTitle;
   color: $primary-color;
   margin-bottom: 44px;
+  width: 418px;
 
   &--light {
     color: $secondary-color;
+  }
+
+  @include maxMedia($preMob) {
+    width: 265px;
+    font-size: 28px;
   }
 
   //   margin-bottom: 30px;

@@ -119,6 +119,10 @@
   color: $secondary-color;
   animation-delay: 300ms;
 
+  @include maxMedia($preMob) {
+    font-size: 45px;
+  }
+
   @include minMedia($desk) {
     font-size: 72px;
     line-height: 1.18;

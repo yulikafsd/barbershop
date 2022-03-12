@@ -1,0 +1,33 @@
+.footer {
+  padding: 44px 0;
+}
+
+.footer-socials {
+  @include centeredFlex($just: flex-end);
+  margin-bottom: 20px;
+}
+
+.footer-socials::before {
+  content: '';
+  height: 1px;
+  width: 60px;
+  background-color: currentColor;
+}
+
+.footer-socials__item {
+  margin-left: 40px;
+}
+
+.footer-socials__link {
+  @include textPretitle;
+  letter-spacing: 0.2em;
+  text-transform: none;
+  color: $primary-color;
+}
+
+.footer__copyright {
+  @include textPretitle;
+  letter-spacing: 0.2em;
+  text-transform: none;
+  color: $light-text-color;
+}

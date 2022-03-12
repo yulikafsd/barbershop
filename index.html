@@ -127,10 +127,10 @@
           <div class="hero-socials">
             <ul class="hero-socials__list list">
               <li class="hero-socials__item pretitle">
-                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
               </li>
               <li class="hero-socials__item">
-                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer">Youtube</a>
+                <a class="hero-socials__link link" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">Youtube</a>
               </li>
             </ul>
           </div>
@@ -204,7 +204,7 @@
         <div class="container">
           <p class="section__pretitle pretitle">старая традиционная школа</p>
           <h2 class="section__title">Почему приходят именно к нам?</h2>
-          <p class="section__aftertitle">О нас говорят только хорошее. Но лучше<br/>1 раз увидеть и прочувствовать, чем 10 раз прочитать. </p>
+          <p class="section__aftertitle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать. </p>
           <div class="reasons-container">
             <ul class="reasons-left list">
               <li class="reasons-list__item">
@@ -223,7 +223,7 @@
               </li>
               <li class="reasons-list__item">
                 <span class="reasons-list__number">100</span>
-                <p class="reasons-list__text">Подарков постоянным клиентам</p>
+                <p class="reasons-list__text reasons-list__text--long">Подарков постоянным клиентам</p>
               </li>
             </ul>
           </div>
@@ -848,121 +848,74 @@
         </div>
       </section>
 
-    </main>
+      <!-- Online -->
 
-    <!-- Футер
-    <footer class="footer">
-      <div class="container footer__container">
-        <div class="footer-address">
-          <a class="logo footer-address__logo link" href="./index.html" lang="en">
-            <span class="logo__accent">Web</span>Studio</a
-          >
-          <address class="address">
-            <ul class="address-list list">
-              <li class="address-list__item">
-                <a
-                  class="address-list__link link"
-                  href="https://goo.gl/maps/JsHpxsJ47qESHzWFA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  г. Киев, пр-т Леси Украинки, 26</a
-                >
-              </li>
-              <li class="address-list__item">
-                <a
-                  class="address-list__link address-list__link--alfa link"
-                  href="mailto:info@example.com"
-                  >info@example.com</a
-                >
-              </li>
-              <li class="address-list__item">
-                <a class="address-list__link address-list__link--alfa link" href="tel:+380991111111"
-                  >+38 099 111 11 11</a
-                >
-              </li>
-            </ul>
-          </address>
-        </div>
-
-        <div class="footer-social">
-          <b class="social-label">присоединяйтесь</b>
-          <div class="social-wrapper">
-            <ul class="social-list list">
-              <li class="social-list__item">
-                <a
-                  href=""
-                  class="social-list__link social-list__link--footer link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="social-list__icon" width="20" height="20">
-                    <use href="images/icons.svg#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a
-                  href=""
-                  class="social-list__link link social-list__link--footer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="social-list__icon" width="20" height="20">
-                    <use href="images/icons.svg#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a
-                  href=""
-                  class="social-list__link link social-list__link--footer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="social-list__icon" width="20" height="20">
-                    <use href="images/icons.svg#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social-list__item">
-                <a
-                  href=""
-                  class="social-list__link link social-list__link--footer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <svg class="social-list__icon" width="20" height="20">
-                    <use href="images/icons.svg#linkedin"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-subscribe">
-          <form name="subscribe-form" class="subscribe-form">
-            <label for="subscribe" class="subscribe-form__label"> Подпишитесь на рассылку </label>
-            <div class="subscribe-form__field">
-              <input
-                type="email"
-                name="subscribe"
-                placeholder="E-mail"
-                id="subscribe"
-                class="subscribe-form__input"
-              />
-              <button type="submit" class="button subscribe-form__button">
-                <span class="button__text">Подписаться</span>
-                <svg class="button__icon" width="24" height="24">
-                  <use href="./images/icons.svg#send"></use>
-                </svg>
-              </button>
-            </div>
+      <section class="section online">
+        <div class="container">
+          <h2 class="section__title section__title--light">Онлайн-запись</h2>
+          <form name="online-form" class="online-form" action="#" autocomplete="off">
+          <label class="online-form__label">
+            <input type="text" name="name" class="online-form__input" autofocus placeholder="Имя*" />
+            <!-- <svg class="order-form__icon" width="18" height="18">
+              <use href="./images/icons.svg#person"></use>
+            </svg> -->
+          </label>
+          <label class="online-form__label">
+            <input type="text" name="name" class="online-form__input" autofocus placeholder="Телефон*" />
+            <!-- <svg class="order-form__icon" width="18" height="18">
+              <use href="./images/icons.svg#person"></use>
+            </svg> -->
+          </label>
+          <label class="online-form__label">
+            <span class="online-form__label-text">Сообщение</span>
+            <textarea type="textarea" name="name" class="online-form__input online-form__input--textarea" autofocus placeholder=""></textarea>            
+            </label>
+            <button type="button" class="button button--light section__button" aria-label="Send request">Отправить</button>
           </form>
         </div>
-      </div>
-    </footer> -->
+      </section>
+
+      <!-- Contacts -->
+
+      <section class="section contacts">
+        <div class="container">
+          <h2 class="section__title section__title--light">Контакты</h2>
+          <address class="address">
+            <ul class="address-list list">
+            <li class="address-list__item">
+              <svg class="address-list__icon" width="24" height="24">
+                <use href="images/icons.svg#map-pin"></use>
+              </svg>
+              <a class="address-list__link link" href="#" target="_blank" rel="noopener noreferrer">ул. Васильковая, 7А, Киев, 08132</a></li>
+            <li class="address-list__item">
+              <svg class="address-list__icon" width="24" height="24">
+                <use href="images/icons.svg#phone"></use>
+              </svg>
+              <a class="address-list__link link" href="tel:+380441111111">+38 044 111 11 11</a></li>
+            <li class="address-list__item">
+              <svg class="address-list__icon" width="24" height="24">
+                <use href="images/icons.svg#mail"></use>
+              </svg>
+              <a class="address-list__link link" href="mailto:barbershop@email.com">barbershop@email.com</a></li>
+          </ul></address>
+                    <p class="section__pretitle section__pretitle--light pretitle">Время работы</p>
+<p class="contacts__schedule">Ежедневно с 9:00 до 22:00</p>
+        </div>
+      </section>
+      <footer class="footer">
+        <div class="container">
+        <ul class="footer-socials list">
+              <li class="footer-socials__item">
+                <a class="footer-socials__link link" href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
+              </li>
+              <li class="footer-socials__item">
+                <a class="footer-socials__link link" href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">Youtube</a>
+              </li>
+        </ul>
+        <p class="footer__copyright">&#169;	Copyright 2022</p> 
+        </div>
+      </footer>
+    </main>
 
     <!-- Модалка
 

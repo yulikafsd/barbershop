@@ -10,6 +10,7 @@
   background-color: transparent;
   border: 1px solid $accent-color;
   border-radius: 25px;
+  outline: none;
 
   @include textButton;
   text-align: center;

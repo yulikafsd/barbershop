@@ -37,9 +37,6 @@
   text-transform: uppercase;
 }
 
-// Gallery
-// line-height: 1.9;
-
 @mixin textTitle($ff: $raleway, $fw: 700, $fs: 42px, $lh: 1.17, $ls: 0.05em) {
   font-family: $ff;
   font-weight: $fw;
@@ -47,9 +44,6 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
-
-// Online, contacts
-// text-align: center;
 
 @mixin textAftertitle($ff: $open-sans, $fw: 400, $fs: 16px, $lh: 1.62, $ls: 0.02em) {
   font-family: $ff;
@@ -59,11 +53,6 @@
   letter-spacing: $ls;
 }
 
-// Contacts
-// font-size: 18px;
-// line-height: 1.67;
-// text-decoration-line: underline;
-
 @mixin textBody($ff: $open-sans, $fw: 400, $fs: 14px, $lh: 1.86, $ls: 0.02em) {
   font-family: $ff;
   font-weight: $fw;
@@ -71,14 +60,6 @@
   line-height: $lh;
   letter-spacing: $ls;
 }
-
-// Masters - position
-// line-height: 1.36;
-// text-align: center;
-
-// Contacts
-// font-size: 18px;
-// line-height: 1.67;
 
 @mixin textButton($ff: $open-sans, $fw: 600, $fs: 12px, $lh: 1.33, $ls: 0.09em) {
   font-family: $ff;

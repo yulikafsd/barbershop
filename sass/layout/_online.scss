@@ -1,0 +1,58 @@
+.section.online {
+  background-color: $dark-online-bg-color;
+}
+
+.online .section__title {
+  text-align: center;
+}
+
+.online-form__input {
+  display: block;
+  width: 418px;
+  background-color: transparent;
+  outline: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding: 8px 0px;
+  margin-bottom: 36px;
+  @include textPretitle;
+  color: $secondary-color;
+  transition: border-color $main-effect;
+
+  &--textarea {
+    margin-bottom: 44px;
+    height: 60px;
+    resize: none;
+  }
+
+  @include maxMedia($preMob) {
+    min-width: 265px;
+    width: 100%;
+  }
+
+  &::placeholder {
+    @include textPretitle;
+    color: rgba(157, 164, 189, 0.4);
+    transition: color $main-effect;
+  }
+}
+
+.online-form__label-text {
+  @include textPretitle;
+  color: rgba(157, 164, 189, 0.4);
+  transition: color $main-effect;
+}
+
+.online-form__label:focus-within {
+  & > .online-form__input {
+    color: $secondary-color;
+    border-color: $secondary-color;
+  }
+  & > .online-form__input::placeholder {
+    color: $secondary-color;
+  }
+
+  & .online-form__label-text {
+    color: $secondary-color;
+  }
+}

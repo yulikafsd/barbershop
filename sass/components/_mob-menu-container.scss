@@ -20,6 +20,7 @@
   @include maxMedia($preMob) {
     min-height: 100%;
     padding-bottom: 10vh;
+    min-width: 80%;
   }
 
   @include minMedia($tab) {

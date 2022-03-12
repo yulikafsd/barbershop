@@ -1,0 +1,50 @@
+.section.contacts {
+  background-color: $dark-online-bg-color;
+  background-image: url(../images/bgs/contacts-mob@1x.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/bgs/contacts-mob@2x.webp);
+  }
+
+  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+    background-image: url(../images/bgs/contacts-mob@3x.webp);
+  }
+}
+
+.address {
+  margin-bottom: 44px;
+}
+
+.address-list__item {
+  @include centeredFlex($just: flex-start);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.address-list__icon {
+  margin-right: 16px;
+}
+
+.contacts .section__pretitle {
+  color: $secondary-color;
+  margin-bottom: 20px;
+}
+
+.contacts__schedule,
+.address-list__link {
+  @include textAftertitle;
+  font-size: 18px;
+  line-height: 1.67;
+  color: $light-text-color;
+  transition: color $main-effect;
+}
+
+.address-list__link:hover,
+.address-list__link:focus {
+  color: $secondary-color;
+}

@@ -26,6 +26,15 @@
 
   &:first-child {
     margin-bottom: 30px;
+
+    @include maxMedia($preMob) {
+      margin-bottom: 10vw;
+    }
+  }
+
+  @include maxMedia($preMob) {
+    width: 40vw;
+    min-width: 125px;
   }
 }
 
@@ -52,7 +61,12 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  &:last-child {
-    width: 133px;
+}
+
+.reasons-list__text--long {
+  width: 130px;
+
+  @include maxMedia($preMob) {
+    width: 122px;
   }
 }
