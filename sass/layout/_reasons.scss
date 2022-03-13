@@ -12,6 +12,14 @@
   }
 }
 
+.reasons .container {
+  @include minMedia($desk) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+}
+
 .reasons-container {
   display: flex;
   justify-content: space-between;
@@ -19,6 +27,12 @@
   @include minMedia($tab) {
     width: 450px;
     margin-left: auto;
+  }
+
+  @include minMedia($desk) {
+    margin-left: 100px;
+    margin-right: 130px;
+    width: 370px;
   }
 }
 
@@ -48,6 +62,10 @@
 
   @include minMedia($tab) {
     width: 210px;
+  }
+
+  @include minMedia($desk) {
+    width: 170px;
   }
 }
 

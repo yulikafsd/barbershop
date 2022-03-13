@@ -1,6 +1,10 @@
 .about .container {
   @include minMedia($tab) {
-    @include centeredFlex($align: top, $just: space-between);
+    @include centeredFlex($align: flex-start, $just: space-between);
+  }
+
+  @include minMedia($desk) {
+    justify-content: flex-start;
   }
 }
 
@@ -16,6 +20,11 @@
   @include minMedia($tab) {
     width: 330px;
   }
+
+  @include minMedia($desk) {
+    font-size: 42px;
+    width: 483px;
+  }
 }
 
 .thumb-about {
@@ -25,11 +34,29 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 507px;
+  }
+
+  @include minMedia($desk) {
+    width: 570px;
+    height: auto;
+    flex-direction: row;
+    margin-right: 64px;
   }
 }
 
 .wrapper-about {
   @include minMedia($tab) {
     width: 330px;
+  }
+
+  @include minMedia($desk) {
+    width: 500px;
+  }
+}
+
+.about__img {
+  @include minMedia($desk) {
+    width: 270px;
   }
 }

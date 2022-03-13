@@ -1,14 +1,41 @@
+.online-contacts-wrapper {
+  background-color: $dark-online-bg-color;
+
+  @include minMedia($desk) {
+    display: flex;
+  }
+}
+
 .section.online {
   background-color: $dark-online-bg-color;
+  @include minMedia($desk) {
+    width: 50vw;
+    flex-grow: 1;
+  }
+}
+
+.online .container {
+  @include minMedia($desk) {
+    width: 615px;
+    margin-right: 0;
+  }
 }
 
 .online .section__title {
   text-align: center;
+
+  @include minMedia($tab) {
+    text-align: left;
+  }
 }
 
 .form-wrapper {
   @include minMedia($tab) {
     @include centeredFlex($just: space-between);
+  }
+
+  @include minMedia($desk) {
+    justify-content: flex-start;
   }
 }
 
@@ -29,6 +56,10 @@
     width: 330px;
   }
 
+  @include minMedia($desk) {
+    width: 265px;
+  }
+
   &--textarea {
     margin-bottom: 44px;
     height: 60px;
@@ -36,6 +67,10 @@
 
     @include minMedia($tab) {
       width: 690px;
+    }
+
+    @include minMedia($tab) {
+      width: 560px;
     }
   }
 
@@ -55,6 +90,12 @@
   @include textPretitle;
   color: rgba(157, 164, 189, 0.4);
   transition: color $main-effect;
+}
+
+.online-form__label {
+  @include minMedia($desk) {
+    margin-right: 30px;
+  }
 }
 
 .online-form__label:focus-within {

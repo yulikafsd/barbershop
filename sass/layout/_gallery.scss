@@ -2,6 +2,21 @@
   margin-bottom: 44px;
 }
 
+.gallery-thumb {
+  @include minMedia($tab) {
+    display: flex;
+    width: 720px;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  @include minMedia($desk) {
+    width: 1200px;
+    flex-wrap: nowrap;
+    margin: -15px;
+  }
+}
+
 .picture-thumb {
   @include maxMedia($preTab) {
     &:not(:last-child) {
@@ -14,15 +29,12 @@
   }
 }
 
-.gallery-thumb {
-  @include minMedia($tab) {
-    display: flex;
-    width: 720px;
-    flex-wrap: wrap;
-    margin: -15px;
-  }
-}
-
 .gallery .team-list__img {
-  width: 330px;
+  @include minMedia($tab) {
+    width: 330px;
+  }
+
+  @include minMedia($desk) {
+    width: 270px;
+  }
 }

@@ -1,16 +1,55 @@
 .section.contacts {
   background-color: $dark-online-bg-color;
-  background-image: url(../images/bgs/contacts-mob@1x.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-    background-image: url(../images/bgs/contacts-mob@2x.webp);
+  @include maxMedia($preTab) {
+    background-image: url(../images/bgs/contacts-mob@1x.webp);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/bgs/contacts-mob@2x.webp);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/bgs/contacts-mob@3x.webp);
+    }
   }
 
-  @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
-    background-image: url(../images/bgs/contacts-mob@3x.webp);
+  @include minMedia($tab) {
+    background-image: url(../images/bgs/contacts-tab@1x.webp);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/bgs/contacts-tab@2x.webp);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/bgs/contacts-tab@3x.webp);
+    }
+  }
+
+  @include minMedia($desk) {
+    margin-left: 0;
+    background-image: url(../images/bgs/contacts-desk@1x.webp);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: url(../images/bgs/contacts-desk@2x.webp);
+    }
+
+    @media (min-device-pixel-ratio: 3), (min-resolution: 288dpi), (min-resolution: 3dppx) {
+      background-image: url(../images/bgs/contacts-desk@3x.webp);
+    }
+
+    width: 50vw;
+    flex-grow: 1;
+    padding-left: 100px;
+  }
+}
+
+.contacts .container {
+  @include minMedia($desk) {
+    width: 625px;
+    margin-left: 0;
   }
 }
 
@@ -19,7 +58,7 @@
 }
 
 .contacts-wrapper {
-  @include minMedia($tab) {
+  @include rangeMedia($tab, $preDesk) {
     display: flex;
     justify-content: space-between;
   }
@@ -27,7 +66,7 @@
 
 .address {
   margin-bottom: 44px;
-  @include minMedia($tab) {
+  @include rangeMedia($tab, $preDesk) {
     width: 330px;
   }
 }
@@ -54,13 +93,13 @@
   color: $secondary-color;
   margin-bottom: 20px;
 
-  @include minMedia($tab) {
+  @include rangeMedia($tab, $preDesk) {
     color: $light-text-color-alfa;
   }
 }
 
 .schedule {
-  @include minMedia($tab) {
+  @include rangeMedia($tab, $preDesk) {
     width: 330px;
   }
 }

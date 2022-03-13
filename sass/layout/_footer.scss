@@ -1,6 +1,10 @@
 .footer {
   padding: 44px 0;
   background-color: $light-bg-color;
+
+  @include minMedia($desk) {
+    padding: 55px 0;
+  }
 }
 
 .footer .container {

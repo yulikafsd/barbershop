@@ -7,11 +7,26 @@
   @include minMedia($tab) {
     margin-left: 119px;
   }
+  @include minMedia($desk) {
+    margin-left: 0;
+  }
+}
+
+.team-list {
+  @include minMedia($desk) {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+  }
 }
 
 .team-list__item {
   &:not(:last-child) {
     margin-bottom: 64px;
+
+    @include minMedia($desk) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -21,6 +36,10 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @include minMedia($desk) {
+    width: 370px;
   }
 }
 
